@@ -8,23 +8,26 @@ The purpose of recreating my portfolio was to get practice the whole process of 
 
 ## My Process
 
-**Design:**
+#### Design:
+---
 
- Used dribble and different websites from Next.js projects for inspiration.
+- Used dribble and different websites from Next.js projects for inspiration.
 
-Determined color pallete and typography.
+- Determined color pallete and typography.
 
-Design each section of the page with gimp
+- Design each section of the page with Gimp
 
-**Development:**
+#### Development:
+---
 
-I pulled in a Next Boilerplate that had prettier,eslint,jest, and typescript configured and then i added styled-componets.
-  (https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
+- I pulled in a [Next Boilerplate](https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest) that had prettier,eslint,jest, and typescript configured and then i added styled-componets.
+  
 
-I will then develop and style based on the design i created
+- I will then develop and style based on the design i created
 
-I plan to use a Firebase for my backend
+- I plan to use a Firebase for my backend
 
-**Deploy:**
+#### Deploy:
+---
 
-The plan is to host on Vercel <a>(https://vercel.com/)</a> and add my domain name.
+- The plan is to host on [Vercel](https://vercel.com/) and add my domain name.
