@@ -1,27 +1,30 @@
-# NextJS Typescript Boilerplate
+# My Portfolio
 
-Bootstrap a developer-friendly NextJS app configured with:
+This is a recreation of my portfolio using Next.js, Typescript and Styled-Components.
 
-- [Typescript](https://www.typescriptlang.org/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
-- Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
-- Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+Here is my current portfolio which will remain up (https://joshualucasportfolio.herokuapp.com/)
 
-## Deploy your own
+The purpose of recreating my portfolio was to get practice the whole process of developing a website.
 
-Deploy the example using [Vercel](https://vercel.com):
+## My Process
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
+Design:
 
-## How to use
+    -Used dribble and different websites from Next.js projects for inspiration.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+    -Determined color pallete and typography.
 
-```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-```
+    -Design each section of the page with gimp
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Development:
+
+    -I pulled in a Next Boilerplate that had prettier,eslint,jest, and typescript configured and then i added styled-componets on top of that.
+        https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest
+
+    -I will then develop and style based on the design i created
+
+    -I plan to use a Firebase for my backend
+
+Deploy:
+
+    -The plan is to host on Vercel (https://vercel.com) and add my domain name.
