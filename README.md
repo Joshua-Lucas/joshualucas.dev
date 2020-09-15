@@ -9,6 +9,7 @@ The purpose of recreating my portfolio was to get practice the whole process of 
 ## My Process
 
 #### Design:
+
 ---
 
 - Used dribble and different websites from Next.js projects for inspiration.
@@ -18,16 +19,17 @@ The purpose of recreating my portfolio was to get practice the whole process of 
 - Design each section of the page with Gimp
 
 #### Development:
+
 ---
 
 - I pulled in a [Next Boilerplate](https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest) that had prettier,eslint,jest, and typescript configured and then i added styled-componets.
-  
 
 - I will then develop and style based on the design i created
 
 - I plan to use a Firebase for my backend
 
 #### Deploy:
+
 ---
 
 - The plan is to host on [Vercel](https://vercel.com/) and add my domain name.
