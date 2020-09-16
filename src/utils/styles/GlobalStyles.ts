@@ -35,7 +35,6 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         margin: 0;
-        padding: 0;
         background-color: ${Theme.colors.primary};
         color: ${Theme.colors.secondary};
         font-family:  'Raleway';
