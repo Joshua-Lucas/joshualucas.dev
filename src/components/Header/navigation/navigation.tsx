@@ -8,8 +8,8 @@ const ComponentContainer = styled.header`
   @media (min-width: 786px) {
     max-width: 80%;
     margin: auto;
+    background-color: ${({ theme }) => theme.colors.secondary};
     display: flex;
-    justify-content: space-between;
   }
 `
 

@@ -7,7 +7,7 @@ const LogoSvg = styled.svg`
   height: 1.25rem;
   grid-column: 3/4;
   justify-self: end;
-  fill: ${({ theme }) => theme.colors.secondary};
+  fill: ${({ theme }) => theme.colors.primary};
   &:hover {
     fill: ${(props) => props.theme.accentDark};
   }
