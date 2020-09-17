@@ -1,9 +1,15 @@
-import Navigation from '../src/components/navigation/navigation'
+import Header from '../src/components/Header/Header'
 
 export default function Home() {
   return (
-    <div>
-      <Navigation />
-    </div>
+    <>
+      <Header />
+    </>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  }
 }
