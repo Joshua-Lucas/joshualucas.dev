@@ -9,6 +9,7 @@ import Link from 'next/link'
 const NavContainer = styled.nav<IToggleProps>`
   height: 100vh;
   width: 100vw;
+  background-color: ${({ theme }) => theme.colors.secondary};
   padding: 3.55rem 0 5rem;
   z-index: 50;
   position: absolute;
@@ -34,18 +35,20 @@ const NavContainer = styled.nav<IToggleProps>`
 `
 
 const NavLink = styled.a`
-  padding-bottom: 3.32rem;
+  margin-bottom: 3.32rem;
   line-height: 1.5rem;
+  color: ${({ theme }) => theme.colors.primary};
   text-decoration: none;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 
   &:hover {
-    border-bottom: ${rem('2px')} solid ${({ theme }) => theme.colors.secondary};
+    border-bottom: ${rem('2px')} solid ${({ theme }) => theme.colors.primary};
   }
   @media (min-width: 786px) {
     padding: 0;
     margin: 0 1rem;
+    font-size: 1rem;
   }
 `
 

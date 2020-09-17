@@ -8,7 +8,7 @@ const LogoSvg = styled.svg`
 
   grid-column: 3/4;
   justify-self: end;
-  fill: ${({ theme }) => theme.colors.secondary};
+  fill: ${({ theme }) => theme.colors.primary};
   &:hover {
     fill: gray;
   }

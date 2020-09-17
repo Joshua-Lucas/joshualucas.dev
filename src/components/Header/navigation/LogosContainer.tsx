@@ -5,17 +5,17 @@ import CloseLogo from './Icons/Close'
 
 const LogoWrapper = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.secondary};
   position: relative;
   z-index: 100;
   display: flex;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   justify-content: space-between;
   @media (min-width: 786px) {
     height: auto;
     width: auto;
     z-index: 0;
-    padding-right: 4rem;
+    padding-left: 0;
   }
 `
 
@@ -33,6 +33,10 @@ const NavButton = styled.button`
     display: none;
   }
 `
+
+const Logo = styled.h1`
+  color: ${({ theme }) => theme.colors.primary};
+`
 //INTERFACES
 interface ILogoContainer {
   activateNav: React.Dispatch<React.SetStateAction<boolean>>
@@ -43,7 +47,7 @@ interface ILogoContainer {
 const LogoContainer: React.FC<ILogoContainer> = ({ activateNav, toggle }) => {
   return (
     <LogoWrapper>
-      <h1>JoshuaLucas</h1>
+      <Logo>JoshuaLucas</Logo>
       <NavButton
         aria-label="Navigation Toggle Dropdown"
         onClick={() => activateNav(!toggle)}
