@@ -17,16 +17,25 @@ const TextContiner = styled.div`
 const PreTitle = styled.h4`
   margin: 0.15rem 0;
   font-weight: 300;
+  @media (min-width: 786px) {
+    font-size: 2rem;
+  }
 `
 
 const Title = styled.h1`
   margin: 0;
   font-family: Prompt;
+  @media (min-width: 786px) {
+    font-size: 4rem;
+  }
 `
 
 const SubTitle = styled.p`
   margin-top: 0.5rem;
   font-weight: 300;
+  @media (min-width: 786px) {
+    font-size: 1.25rem;
+  }
 `
 
 const LinkContainer = styled.div`
@@ -35,10 +44,14 @@ const LinkContainer = styled.div`
   padding-bottom: 2rem;
   font-weight: 300;
   color: ${({ theme }) => theme.colors.accent};
+  cursor: pointer;
 `
 
 const NavLink = styled.a`
   padding-right: 0.25rem;
+  &:hover {
+    border-bottom: ${rem('2px')} solid ${({ theme }) => theme.colors.accent};
+  }
 `
 
 //React Component
@@ -53,9 +66,10 @@ const BannerText: React.FC = () => {
         </SubTitle>
         <LinkContainer>
           <Link href="/#">
-            <NavLink>Connect with me</NavLink>
+            <NavLink>
+              Connect with me <span> {'->'} </span>
+            </NavLink>
           </Link>
-          <span> {'->'} </span>
         </LinkContainer>
       </TextContiner>
     </>
