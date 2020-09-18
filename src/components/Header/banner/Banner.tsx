@@ -31,7 +31,7 @@ const BannerImage = styled.img`
     height: 100%;
   }
   @media (min-width: 1250px) {
-    max-width: ${rem('600px')};
+    max-width: ${rem('690px')};
     /* margin-left: 4rem; */
   }
 `

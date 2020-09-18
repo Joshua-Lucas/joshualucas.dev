@@ -16,6 +16,7 @@ const LogoWrapper = styled.div`
     width: auto;
     z-index: 0;
     padding-left: 0;
+    padding-right: 2rem;
   }
 `
 
