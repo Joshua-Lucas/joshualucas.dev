@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { firestore } from '../../../firebase'
 
 //Styled Components
 const AboutContainer = styled.div``
@@ -7,6 +8,22 @@ const AboutContainer = styled.div``
 
 //React Component
 const About: React.FC = () => {
+  const [TestData, setTestData] = useState([])
+  useEffect(function onMount() {
+    async function getPosts() {
+      var snapshot = await firestore.collection('posts').get()
+
+      var posts = snapshot.docs.map(function getDocs(doc) {
+        return {
+          id: doc.id,
+          ...doc.data(),
+        }
+      })
+      setTestData(posts)
+    }
+
+    getPosts()
+  }, [])
   return (
     <>
       <AboutContainer>
@@ -23,6 +40,11 @@ const About: React.FC = () => {
           with my wife, trying a new restaurant, or conversing with a friend
           over a cup of coffee.
         </p>
+        {TestData.map((post) => (
+          <p key={post.id}>{post.title}</p>
+        ))}
+        <p>Test to see if something happens</p>
+        <p>DO i have to recompile every time??</p>
       </AboutContainer>
     </>
   )
