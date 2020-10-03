@@ -13,12 +13,12 @@ const config = {
 }
 
 // Initialize Firebase
-if (typeof window !== 'undefined' && !firebase.apps.length) {
-  firebase.initializeApp(config)
-  // To enable analytics. https://firebase.google.com/docs/analytics/get-started
-  // if ('measurementId' in config) firebase.analytics()
-}
+// if (typeof window !== 'undefined' && !firebase.apps.length) {
+//   //   // To enable analytics. https://firebase.google.com/docs/analytics/get-started
+//   //   // if ('measurementId' in config) firebase.analytics()
+// }
+var app = firebase.initializeApp(config)
 
-export const firestore = firebase.firestore()
+export const firestore = app.firestore()
 
 export default firebase
