@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { firestore } from '../../../firebase'
+import { db } from '../../../firebase'
 
 //Styled Components
 const AboutContainer = styled.div``
@@ -8,10 +8,10 @@ const AboutContainer = styled.div``
 
 //React Component
 const About: React.FC = () => {
-  const [TestData, setTestData] = useState([])
+  const [skillsData, setSkillsData] = useState([])
   useEffect(function onMount() {
     async function getPosts() {
-      var snapshot = await firestore.collection('posts').get()
+      var snapshot = await db.collection('skills').get()
 
       var posts = snapshot.docs.map(function getDocs(doc) {
         return {
@@ -19,7 +19,7 @@ const About: React.FC = () => {
           ...doc.data(),
         }
       })
-      setTestData(posts)
+      setSkillsData(posts)
     }
 
     getPosts()
@@ -40,11 +40,8 @@ const About: React.FC = () => {
           with my wife, trying a new restaurant, or conversing with a friend
           over a cup of coffee.
         </p>
-        {TestData.map((post) => (
-          <p key={post.id}>{post.title}</p>
-        ))}
-        <p>Test to see if something happens</p>
-        <p>DO i have to recompile every time??</p>
+        {console.log(skillsData)}{' '}
+        {/* Change from console log to skills container */}
       </AboutContainer>
     </>
   )
