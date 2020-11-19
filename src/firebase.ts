@@ -17,8 +17,8 @@ const config = {
 //   //   // To enable analytics. https://firebase.google.com/docs/analytics/get-started
 //   //   // if ('measurementId' in config) firebase.analytics()
 // }
-var app = firebase.initializeApp(config)
 
-export const firestore = app.firestore()
+firebase.initializeApp(config)
+export const db = firebase.firestore()
 
 export default firebase
