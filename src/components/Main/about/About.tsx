@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { db } from '../../../firebase'
+import SkillsContainer from './SkillsContiner'
 
 //Styled Components
 const AboutContainer = styled.div``
@@ -8,22 +8,6 @@ const AboutContainer = styled.div``
 
 //React Component
 const About: React.FC = () => {
-  const [skillsData, setSkillsData] = useState([])
-  useEffect(function onMount() {
-    async function getPosts() {
-      var snapshot = await db.collection('skills').get()
-
-      var posts = snapshot.docs.map(function getDocs(doc) {
-        return {
-          id: doc.id,
-          ...doc.data(),
-        }
-      })
-      setSkillsData(posts)
-    }
-
-    getPosts()
-  }, [])
   return (
     <>
       <AboutContainer>
@@ -40,8 +24,7 @@ const About: React.FC = () => {
           with my wife, trying a new restaurant, or conversing with a friend
           over a cup of coffee.
         </p>
-        {console.log(skillsData)}{' '}
-        {/* Change from console log to skills container */}
+        <SkillsContainer />
       </AboutContainer>
     </>
   )
