@@ -7,7 +7,7 @@ import Link from 'next/link'
 const TextContiner = styled.div`
   width: 100%;
   margin-top: ${rem('-125px')};
-  padding: 0 0.5rem;
+  padding: 0 5rem 0 0;
   color: ${({ theme }) => theme.colors.primary};
   @media (min-width: 786px) {
     margin-top: 0;
