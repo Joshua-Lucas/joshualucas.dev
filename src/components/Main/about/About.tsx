@@ -3,7 +3,21 @@ import styled from 'styled-components'
 import SkillsContainer from './SkillsContiner'
 
 //Styled Components
-const AboutContainer = styled.div``
+const AboutContainer = styled.div`
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 5rem;
+  text-align: center;
+
+  @media (min-width: 786px) {
+    max-width: 70%;
+    margin-top: 8rem;
+  }
+`
 //Interfaces
 
 //React Component

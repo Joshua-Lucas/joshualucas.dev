@@ -18,7 +18,7 @@ const BannerContainer = styled.div`
 
   @media (min-width: 786px) {
     height: 100%;
-    max-width: 70%;
+    max-width: 75%;
     margin: auto;
     flex-direction: row-reverse;
     justify-content: space-between;

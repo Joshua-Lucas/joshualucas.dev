@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { db } from '../../../firebase'
-// import SkillsComponent, {ISkillComponent} from './SkillsComponent'
+import SkillsComponent from './SkillsComponent'
 
 //Styled Components
 const SkillsWrapper = styled.div``
@@ -26,11 +26,14 @@ const SkillsContiner: React.FC = () => {
     getPosts()
   }, [])
 
+  var lang = skillsData[0]
+  var skills = skillsData[1]
+  var tools = skillsData[2]
   return (
     <>
       <SkillsWrapper>
-        {console.log(skillsData)}{' '}
-        {/* Change from console log to skills container */}
+        {console.log(lang, skills, tools)}{' '}
+        <SkillsComponent langs={lang} skills={skills} tools={tools} />
       </SkillsWrapper>
     </>
   )

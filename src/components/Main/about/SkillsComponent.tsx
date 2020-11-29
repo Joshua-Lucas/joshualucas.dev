@@ -6,31 +6,47 @@ const Title = styled.h1``
 
 const SubTitle = styled.h2``
 //Interfaces
-export interface ISkillComponent {
+interface ISkill {
   title: string
   description: string
-  lang: string[]
-  tools: string[]
+}
+
+interface ILang {
+  frontend: string[]
+  backend: string[]
+  essential: string[]
+}
+
+interface ITool {
+  frontend: string[]
+  backend: string[]
+  essential: string[]
+}
+
+export interface ISkillComponent {
+  skills: ISkill
+  langs: ILang
+  tools: ITool
 }
 //React Component
 const SkillsComponent: React.FC<ISkillComponent> = ({
-  title,
-  description,
-  lang,
+  skills,
   tools,
+  langs,
 }) => {
   return (
     <>
       <div>
         {/* PUT SVG*/}
         <div>
-          <Title>{title}</Title>
-          <SubTitle>{description}</SubTitle>
+          <Title>Title</Title>
+          <SubTitle>description</SubTitle>
 
           {/* add filp or dropdown section of what skills i have. (i.e. Languages/frame works ) */}
         </div>
         <div>
-          <h4>{lang}</h4>
+          <h4>{skills}</h4>
+          <h4>{langs}</h4>
           <h4>{tools}</h4>
         </div>
       </div>
