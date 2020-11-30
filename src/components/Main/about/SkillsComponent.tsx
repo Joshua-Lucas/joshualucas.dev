@@ -7,8 +7,12 @@ const Title = styled.h1``
 const SubTitle = styled.h2``
 //Interfaces
 interface ISkill {
-  title: string
-  description: string
+  [objName: string]:
+    | undefined
+    | {
+        title: string
+        description: string
+      }
 }
 
 interface ILang {
