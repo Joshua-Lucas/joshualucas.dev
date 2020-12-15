@@ -21,7 +21,7 @@ const AboutContainer = styled.div`
 //Interfaces
 
 //React Component
-const About: React.FC = () => {
+function About() {
   return (
     <>
       <AboutContainer>

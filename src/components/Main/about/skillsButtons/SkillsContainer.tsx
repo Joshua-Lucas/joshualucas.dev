@@ -17,7 +17,7 @@ interface IDetailsContainer {
 }
 
 //React Component
-const DetailsContainer: React.FC<IDetailsContainer> = ({ toggleFunc }) => {
+function DetailsContainer({ toggleFunc }: IDetailsContainer) {
   const data = [Frontend, Backend, EssentailSkills]
 
   const Buttons: any = data.map((object) => (
