@@ -1,11 +1,18 @@
 import React from 'react'
 import About from './about/About'
 
-const Main: React.FC = () => {
+interface IMain {
+  skills: []
+}
+
+const Main: React.FC<IMain> = ({ skills }) => {
+  const test = skills
+
   return (
     <>
       <main>
         <About />
+        {console.log(test)}
       </main>
     </>
   )

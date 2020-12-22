@@ -18,5 +18,6 @@ export async function connectToDB() {
     console.log('conneted to DB')
   }
   const db: Db = global.mongo.client.db(process.env.DATABASE_NAME)
+
   return { db, dbClient: global.mongo.client }
 }
