@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import SkillsContainer from './SkillsContiner'
+
 
 //Styled Components
 const AboutContainer = styled.div`
@@ -38,7 +38,6 @@ function About() {
           with my wife, trying a new restaurant, or conversing with a friend
           over a cup of coffee.
         </p>
-        <SkillsContainer />
       </AboutContainer>
     </>
   )
