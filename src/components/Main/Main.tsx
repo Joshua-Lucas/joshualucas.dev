@@ -5,7 +5,7 @@ import Introduction from './about/Intorduction'
 interface Skills {
   _id: string
   title: string
-  subTtile: string
+  subTitle: string
   accomplished: string
   intro: string
   categoryTitle: string
