@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-// import DetailsContainer from './Details/DetailsContainer'
-// import TextContainer from './Text/TextContainer'
+import SkillsContainer from './skillsButtons/SkillsContainer'
+import SkillsTextContainer from './skillsText/SkillsTextContainer'
 
 //Styled Components
 const IntroWrapper = styled.div`
@@ -15,19 +15,19 @@ const IntroWrapper = styled.div`
 
 //React Component
 const Introduction: React.FC = () => {
-  //   const [skillsCategorey, setSkillsCategorey] = useState('Intro')
+  const [skillsCategorey, setSkillsCategorey] = useState('Intro')
 
-  //   const toggleSkillsCategorey = (
-  //     Event: React.MouseEvent<HTMLButtonElement>
-  //   ) => {
-  //     Event.preventDefault()
-  //     setSkillsCategorey(Event.currentTarget.id)
-  //   }
+  const toggleSkillsCategorey = (
+    Event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    Event.preventDefault()
+    setSkillsCategorey(Event.currentTarget.id)
+  }
 
   return (
-    <IntroWrapper id="about">
-      {/* <DetailsContainer toggleFunc={toggleSkillsCategorey} />
-      <TextContainer section={skillsCategorey} /> */}
+    <IntroWrapper id="01 Introduction">
+      <SkillsContainer toggleFunc={toggleSkillsCategorey} />
+      <SkillsTextContainer section={skillsCategorey} />
     </IntroWrapper>
   )
 }

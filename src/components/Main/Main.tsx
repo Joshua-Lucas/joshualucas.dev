@@ -1,5 +1,6 @@
 import React from 'react'
-import About from './about/About'
+import Introduction from './about/Intorduction'
+
 
 interface IMain {
   skills: []
@@ -11,7 +12,7 @@ const Main: React.FC<IMain> = ({ skills }) => {
   return (
     <>
       <main>
-        <About />
+        <Introduction />
         {console.log(test)}
       </main>
     </>
