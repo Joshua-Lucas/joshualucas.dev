@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import SkillsContainer from './skillsButtons/SkillsContainer'
 import SkillsTextContainer from './skillsText/SkillsTextContainer'
 
+// INTERFACE
+import { ISkillsData } from '../Main'
+
 //Styled Components
 const IntroWrapper = styled.div`
   height: 100vh;
@@ -14,7 +17,7 @@ const IntroWrapper = styled.div`
 `
 
 //React Component
-const Introduction: React.FC = () => {
+const Introduction: React.FC<ISkillsData> = ({ skills }) => {
   const [skillsCategorey, setSkillsCategorey] = useState('Intro')
 
   const toggleSkillsCategorey = (
@@ -25,8 +28,8 @@ const Introduction: React.FC = () => {
   }
 
   return (
-    <IntroWrapper id="01 Introduction">
-      <SkillsContainer toggleFunc={toggleSkillsCategorey} />
+    <IntroWrapper id="#about">
+      <SkillsContainer toggleFunc={toggleSkillsCategorey} skills={skills} />
       <SkillsTextContainer section={skillsCategorey} />
     </IntroWrapper>
   )
