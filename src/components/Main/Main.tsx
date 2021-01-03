@@ -20,13 +20,10 @@ export interface ISkillsData {
 
 //REACT COMPONENT
 const Main: React.FC<ISkillsData> = ({ skills }) => {
-  const test = skills
-
   return (
     <>
       <main>
         <Introduction skills={skills} />
-        {console.log(test)}
       </main>
     </>
   )
