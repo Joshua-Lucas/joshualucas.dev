@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 //Styled Components
 const TextDetailsWrapper = styled.div`
   width: 100%;
@@ -21,7 +20,7 @@ const Title = styled.h1`
   font-size: 3.75rem;
 `
 
-const SubTitle = styled.h2`
+const IntroText = styled.h2`
   padding-bottom: 2rem;
   /* color: ${(props) => props.theme.lightTextColor}; */
   font-size: 1rem;
@@ -43,7 +42,7 @@ const ListItem = styled.p`
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   text-align: center;
-  border-radius:  0.5rem;
+  border-radius: 0.5rem;
   background-color: ${(props) => props.theme.secondaryColor};
   font-size: 12px;
 `
@@ -51,41 +50,41 @@ const ListItem = styled.p`
 //Interfaces
 interface ITextDetails {
   title: string
-  subtitle: string
-  sectionTitleOne: string
-  sectionItemsOne: string[]
-  sectionTitleTwo: string
-  sectionItemsTwo: string[]
+  intro: string
+  categoryTitle: string
+  categoryData: string[]
+  subCategoryTitle: string
+  subCategoryData: string[]
 }
 
 //React Component
 const TextDetails: React.FC<ITextDetails> = ({
   title,
-  subtitle,
-  sectionTitleOne,
-  sectionItemsOne,
-  sectionTitleTwo,
-  sectionItemsTwo,
+  intro,
+  categoryTitle,
+  categoryData,
+  subCategoryTitle,
+  subCategoryData,
 }) => {
-//   let sectionText = useRef<HTMLDivElement>(null)
+  //   let sectionText = useRef<HTMLDivElement>(null)
 
   return (
     <TextDetailsWrapper>
       <SectionHeader>Introduction</SectionHeader>
       <Title>{title}</Title>
-      <SubTitle>{subtitle}</SubTitle>
-      <ListSectionTitle>{sectionTitleOne}</ListSectionTitle>
+      <IntroText>{intro}</IntroText>
+      <ListSectionTitle>{categoryTitle}</ListSectionTitle>
       <ListContainer role="list">
-        {sectionItemsOne.map((item: string) => (
+        {categoryData.map((item: string) => (
           <ListItem key={item} role="listitem">
             {item}
           </ListItem>
         ))}
       </ListContainer>
 
-      <ListSectionTitle>{sectionTitleTwo}</ListSectionTitle>
+      <ListSectionTitle>{subCategoryTitle}</ListSectionTitle>
       <ListContainer>
-        {sectionItemsTwo.map((item: string) => (
+        {subCategoryData.map((item: string) => (
           <ListItem key={item} role="listitem">
             {item}
           </ListItem>

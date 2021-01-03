@@ -4,11 +4,8 @@ import About from './About'
 import SkillsText from './SkillsText'
 
 // Static Data
-import {
-  Frontend,
-  Backend,
-  EssentailSkills,
-} from '../skillsButtons/StaticData'
+// import { Frontend, Backend, EssentailSkills } from '../skillsButtons/StaticData'
+import { ISkillsData } from '../../Main'
 
 //Styled Components
 const TextWrapper = styled.div`
@@ -16,19 +13,25 @@ const TextWrapper = styled.div`
   grid-column: 2/3;
   grid-row: 2/3;
 `
-interface ITextContainer {
-  section: string
+interface ITextContainer extends ISkillsData {
+  section?: string
 }
 
 //React Component
-const TextContainer: React.FC<ITextContainer> = ({ section }) => {
+const TextContainer: React.FC<ITextContainer> = ({ section, skills }) => {
   const setSection = () => {
-    if (section == 'Frontend') {
-      return Frontend
-    } else if (section == 'Backend') {
-      return Backend
+    const frontend = skills.find((obj) => obj.title == 'frontend')
+    const backend = skills.find((obj) => obj.title == 'backend')
+    const essentailSkills = skills.find(
+      (obj) => obj.title == 'essential skills'
+    )
+
+    if (section == 'frontend') {
+      return frontend
+    } else if (section == 'backend') {
+      return backend
     } else {
-      return EssentailSkills
+      return essentailSkills
     }
   }
 
@@ -39,11 +42,11 @@ const TextContainer: React.FC<ITextContainer> = ({ section }) => {
       ) : (
         <SkillsText
           title={setSection().title}
-          subtitle={setSection().subtitle}
-          sectionTitleOne={setSection().sectionTitleOne}
-          sectionItemsOne={setSection().sectionItemsOne}
-          sectionTitleTwo={setSection().sectionTitleTwo}
-          sectionItemsTwo={setSection().sectionItemsTwo}
+          intro={setSection().intro}
+          categoryTitle={setSection().categoryTitle}
+          categoryData={setSection().categoryData}
+          subCategoryTitle={setSection().subCategoryTitle}
+          subCategoryData={setSection().subCategoryData}
         />
       )}
     </TextWrapper>
