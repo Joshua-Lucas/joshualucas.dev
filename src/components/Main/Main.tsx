@@ -1,18 +1,29 @@
 import React from 'react'
-import About from './about/About'
+import Introduction from './about/Intorduction'
 
-interface IMain {
-  skills: []
+//INTERFACE
+interface Skills {
+  _id: string
+  title: string
+  subTitle: string
+  accomplished: string
+  intro: string
+  categoryTitle: string
+  categoryData: string[]
+  subCategoryTitle: string
+  subCategoryData: string[]
 }
 
-const Main: React.FC<IMain> = ({ skills }) => {
-  const test = skills
+export interface ISkillsData {
+  skills: Skills[]
+}
 
+//REACT COMPONENT
+function Main({ skills }: ISkillsData) {
   return (
     <>
       <main>
-        <About />
-        {console.log(test)}
+        <Introduction skills={skills} />
       </main>
     </>
   )

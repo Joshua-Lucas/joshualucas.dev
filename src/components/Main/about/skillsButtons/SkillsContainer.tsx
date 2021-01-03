@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { ISkillsData } from '../../Main'
 import SkillsButton from './SkillsButton'
-
-import { Frontend, Backend, EssentailSkills } from './StaticData'
 
 //Styled Components
 const DetailsWrapper = styled.div`
@@ -12,19 +11,18 @@ const DetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-interface IDetailsContainer {
+//Interface
+interface IDetailsContainer extends ISkillsData {
   toggleFunc: React.MouseEventHandler<HTMLButtonElement>
 }
 
 //React Component
-function DetailsContainer({ toggleFunc }: IDetailsContainer) {
-  const data = [Frontend, Backend, EssentailSkills]
-
-  const Buttons: any = data.map((object) => (
+function DetailsContainer({ toggleFunc, skills }: IDetailsContainer) {
+  const Buttons: any = skills.map((object) => (
     <SkillsButton
       key={object.title}
       title={object.title}
-      subtitle={object.definition}
+      subtitle={object.subTitle}
       accomplishments={object.accomplished}
       toggle={toggleFunc}
     />

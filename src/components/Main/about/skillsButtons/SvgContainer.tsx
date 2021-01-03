@@ -17,7 +17,7 @@ interface ISvgContianer {
 }
 
 // COMPONENT
-const SvgContianer: React.FC<ISvgContianer> = ({ Paths }) => {
+function SvgContianer({ Paths }: ISvgContianer) {
   return (
     <React.Fragment>
       <SVG viewBox="0 0 1200 1200">{Paths}</SVG>
