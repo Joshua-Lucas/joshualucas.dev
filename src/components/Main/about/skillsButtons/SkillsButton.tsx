@@ -52,12 +52,12 @@ interface IDetailsButton {
 }
 
 //React Component
-const SkillsButton: React.FC<IDetailsButton> = ({
+function SkillsButton({
   title,
   subtitle,
   accomplishments,
   toggle,
-}) => {
+}: IDetailsButton) {
   //Methods
   const SvgIcons = {
     Frontend: Icons.Frontend,

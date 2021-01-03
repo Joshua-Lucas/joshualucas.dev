@@ -17,7 +17,7 @@ const IntroWrapper = styled.div`
 `
 
 //React Component
-const Introduction: React.FC<ISkillsData> = ({ skills }) => {
+function Introduction({ skills }: ISkillsData) {
   const [skillsCategorey, setSkillsCategorey] = useState('Intro')
 
   const toggleSkillsCategorey = (

@@ -58,14 +58,14 @@ interface ITextDetails {
 }
 
 //React Component
-const TextDetails: React.FC<ITextDetails> = ({
+function TextDetails({
   title,
   intro,
   categoryTitle,
   categoryData,
   subCategoryTitle,
   subCategoryData,
-}) => {
+}: ITextDetails) {
   //   let sectionText = useRef<HTMLDivElement>(null)
 
   return (

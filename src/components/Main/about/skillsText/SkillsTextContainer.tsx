@@ -18,14 +18,20 @@ interface ITextContainer extends ISkillsData {
 }
 
 //React Component
-const TextContainer: React.FC<ITextContainer> = ({ section, skills }) => {
+function TextContainer({ section, skills }: ITextContainer) {
   const setSection = () => {
-    const frontend = skills.find((obj) => obj.title == 'frontend')
-    const backend = skills.find((obj) => obj.title == 'backend')
-    const essentailSkills = skills.find(
-      (obj) => obj.title == 'essential skills'
-    )
+    // Searches through skills array and retrieves obj based on selected section.
+    const frontend = skills.find(function getFrontendObj(obj) {
+      return obj.title == 'frontend'
+    })
+    const backend = skills.find(function getBackendObj(obj) {
+      return obj.title == 'backend'
+    })
+    const essentailSkills = skills.find(function getEssentailSkillsObj(obj) {
+      return obj.title == 'essential skills'
+    })
 
+    //renders proper obj from above based on selected section
     if (section == 'frontend') {
       return frontend
     } else if (section == 'backend') {

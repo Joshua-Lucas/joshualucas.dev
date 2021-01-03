@@ -19,7 +19,7 @@ export interface ISkillsData {
 }
 
 //REACT COMPONENT
-const Main: React.FC<ISkillsData> = ({ skills }) => {
+function Main({ skills }: ISkillsData) {
   return (
     <>
       <main>
