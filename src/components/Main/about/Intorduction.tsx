@@ -30,7 +30,7 @@ const Introduction: React.FC<ISkillsData> = ({ skills }) => {
   return (
     <IntroWrapper id="#about">
       <SkillsContainer toggleFunc={toggleSkillsCategorey} skills={skills} />
-      <SkillsTextContainer section={skillsCategorey} />
+      <SkillsTextContainer section={skillsCategorey} skills={skills} />
     </IntroWrapper>
   )
 }
