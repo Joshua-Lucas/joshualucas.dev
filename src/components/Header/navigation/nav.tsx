@@ -41,14 +41,28 @@ const NavLink = styled.a`
   text-decoration: none;
   cursor: pointer;
   font-size: 1.5rem;
+  overflow: hidden;
 
-  &:hover {
-    border-bottom: ${rem('2px')} solid ${({ theme }) => theme.colors.primary};
-  }
   @media (min-width: 786px) {
     padding: 0;
     margin: 0 1rem;
     font-size: 1rem;
+  }
+`
+const NavSpan = styled.span<IStyleProps>`
+  position: relative;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.24, 0.82, 0.43, 1.05);
+  &:before {
+    position: absolute;
+    top: 100%;
+    display: block;
+    transform-origin: left top;
+    content: ${(props) => `'${props.beforeText}'`};
+    color: ${({ theme }) => theme.colors.accent};
+  }
+  &:hover {
+    transform: translateY(-100%);
   }
 `
 
@@ -60,6 +74,9 @@ interface INav {
 interface IToggleProps {
   toggle: boolean
 }
+interface IStyleProps {
+  beforeText: string
+}
 
 const Nav: React.FC<INav> = ({ navLinks, toggleNav }) => {
   return (
@@ -67,12 +84,11 @@ const Nav: React.FC<INav> = ({ navLinks, toggleNav }) => {
       <NavContainer toggle={toggleNav} aria-label="Navigation Label">
         {navLinks.map((link) => (
           <Link key={link} href={`/#${link}`}>
-            <NavLink>{link}</NavLink>
+            <NavLink>
+              <NavSpan beforeText={link}>{link}</NavSpan>
+            </NavLink>
           </Link>
         ))}
-        <Link href="/contact">
-          <NavLink>Contact</NavLink>
-        </Link>
       </NavContainer>
     </>
   )
