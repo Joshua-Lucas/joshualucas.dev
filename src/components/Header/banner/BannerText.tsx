@@ -13,6 +13,7 @@ const TextContiner = styled.div`
   @media (min-width: 786px) {
     margin-top: 0;
     padding: 0 5rem 0 0;
+    align-self: center;
   }
 `
 
