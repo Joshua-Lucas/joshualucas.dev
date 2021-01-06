@@ -7,10 +7,13 @@ import Link from 'next/link'
 const TextContiner = styled.div`
   width: 100%;
   margin-top: ${rem('-125px')};
-  padding: 0 5rem 0 0;
+  padding: 0 1.5rem;
   color: ${({ theme }) => theme.colors.primary};
+  z-index: 10;
   @media (min-width: 786px) {
     margin-top: 0;
+    padding: 0 5rem 0 0;
+    align-self: center;
   }
 `
 
@@ -41,7 +44,7 @@ const SubTitle = styled.p`
 const LinkContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
   font-weight: 300;
   color: ${({ theme }) => theme.colors.accent};
   cursor: pointer;
