@@ -8,12 +8,17 @@ import { ISkillsData } from '../Main'
 
 //Styled Components
 const IntroWrapper = styled.div`
-  height: 100vh;
-  margin-top: 10rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20% 80%;
-  grid-column-gap: 6.5rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column-reverse;
+  @media (min-width: 768px) {
+    height: 100vh;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 80%;
+    grid-column-gap: 6.5rem;
+  }
 `
 
 //React Component
