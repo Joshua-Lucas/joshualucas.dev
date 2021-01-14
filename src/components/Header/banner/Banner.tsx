@@ -57,7 +57,7 @@ const Banner: React.FC = () => {
               src={image}
               alt="me"
               layout="fill"
-              objectFit="contain"
+              objectfit="contain"
               priority
             />
           </ImageContainer>
