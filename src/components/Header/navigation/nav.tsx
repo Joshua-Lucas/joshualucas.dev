@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import styled from 'styled-components'
-import { rem } from 'polished'
 import Link from 'next/link'
+import { rem } from 'polished'
 
 //Styled Components
 
@@ -38,10 +38,15 @@ const NavLink = styled.a`
   margin-bottom: 3.32rem;
   line-height: 1.5rem;
   color: ${({ theme }) => theme.colors.primary};
+  text-transform: capitalize;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.5rem;
   overflow: hidden;
+
+  :focus {
+    outline: solid ${rem('5px')} ${({ theme }) => theme.colors.accent};
+  }
 
   @media (min-width: 786px) {
     padding: 0;
@@ -61,6 +66,7 @@ const NavSpan = styled.span<IStyleProps>`
     content: ${(props) => `'${props.beforeText}'`};
     color: ${({ theme }) => theme.colors.accent};
   }
+
   &:hover {
     transform: translateY(-100%);
   }
@@ -83,7 +89,7 @@ const Nav: React.FC<INav> = ({ navLinks, toggleNav }) => {
     <>
       <NavContainer toggle={toggleNav} aria-label="Navigation Label">
         {navLinks.map((link) => (
-          <Link key={link} href={`/#${link}`}>
+          <Link key={link} href={`/#${link}`} passHref={true}>
             <NavLink>
               <NavSpan beforeText={link}>{link}</NavSpan>
             </NavLink>
