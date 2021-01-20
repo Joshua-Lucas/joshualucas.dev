@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 //Styled Components
-const AboutContainer = styled.div`
+const AboutContainer = styled.section`
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -12,9 +11,7 @@ const AboutContainer = styled.div`
   margin: auto;
   margin-top: 5rem;
   text-align: center;
-
   @media (min-width: 786px) {
-    max-width: 70%;
     margin-top: 8rem;
   }
 `
