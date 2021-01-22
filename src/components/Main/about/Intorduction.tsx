@@ -7,17 +7,22 @@ import SkillsTextContainer from './skillsText/SkillsTextContainer'
 import { ISkillsData } from '../Main'
 
 //Styled Components
-const IntroWrapper = styled.div`
-  margin-top: 3rem;
+const IntroWrapper = styled.section`
+  margin-top: 1rem;
   display: flex;
   flex-direction: column-reverse;
   @media (min-width: 768px) {
     height: 100vh;
-    margin-top: 0;
-    display: grid;
+    width: 75%;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 20% 80%;
-    grid-column-gap: 6.5rem;
+    grid-column-gap: 6.5rem; */
   }
 `
 
