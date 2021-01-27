@@ -7,8 +7,7 @@ const SVG = styled.svg`
   margin-right: 2rem;
   display: flex;
   justify-content: center;
-  fill: ${(props) => props.theme.tirtiaryColor};
-  stroke: ${(props) => props.theme.tirtiaryColor};
+  stroke: #000;
 `
 
 // INTERFACES
