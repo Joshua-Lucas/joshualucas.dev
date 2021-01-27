@@ -27,6 +27,9 @@ const DetailsTitleContiner = styled.div`
   padding: 2rem 0 2rem 4rem;
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 `
 const DetailTitle = styled.h1`
   color: ${(props) => props.theme.secondarydTextColor};
@@ -60,9 +63,9 @@ function SkillsButton({
 }: IDetailsButton) {
   //Methods
   const SvgIcons = {
-    Frontend: Icons.Frontend,
-    Backend: Icons.Server,
-    EssentialSkills: Icons.NetworkHex,
+    frontend: Icons.Frontend,
+    backend: Icons.Server,
+    essentialskills: Icons.NetworkHex,
   }
 
   const setSvgIcon = (IconsObject: any, IconTitle: string) => {

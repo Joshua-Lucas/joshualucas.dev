@@ -5,7 +5,7 @@ import React from 'react'
 const NetworkHex: React.SVGAttributes<SVGPathElement> = (
   <path
     fill="none"
-    strokeWidth="2"
+    strokeWidth="16"
     d="M 601.00,45.00
        C 601.00,45.00 601.00,45.00 601.00,45.00
          594.25,47.69 581.44,55.01 575.00,58.25
