@@ -16,7 +16,7 @@ The purpose of recreating my portfolio was to get practice the whole process of 
 
 - Determined color pallete and typography.
 
-- Design each section of the page with Gimp
+- Design each section of the page with Figma
 
 #### Development:
 
@@ -24,9 +24,9 @@ The purpose of recreating my portfolio was to get practice the whole process of 
 
 - I pulled in a [Next Boilerplate](https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest) that had prettier,eslint,jest, and typescript configured and then i added styled-componets.
 
-- I will then develop and style based on the design i created
+- Then developed and styled based on the design I created
 
-- I plan to use a Firebase for my backend
+- Using MongoDB to hold data and using serverless functions to retrieve that data.
 
 #### Deploy:
 
