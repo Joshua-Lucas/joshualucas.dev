@@ -33,12 +33,38 @@ const GlobalStyle = createGlobalStyle`
     * , *:before, *:after {
         box-sizing: inherit;
     }
+    
     body {
         margin: 0;
         background-color: ${Theme.colors.primary};
         color: ${Theme.colors.secondary};
         font-family:  'Raleway';
         
+    }
+
+    /* Reset margins and paddings on most elements */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol,
+    li,
+    p,
+    pre,
+    blockquote,
+    figure,
+    hr {
+    margin: 0;
+    padding: 0;
+    }
+
+    /* Removes discs from ul */
+    ul {
+    list-style: none;
     }
 `
 
