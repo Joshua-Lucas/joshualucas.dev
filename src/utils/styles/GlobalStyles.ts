@@ -56,7 +56,10 @@ const GlobalStyle = createGlobalStyle`
     p,
     pre,
     blockquote,
+    div,
+    button,
     figure,
+    svg,
     hr {
     margin: 0;
     padding: 0;
