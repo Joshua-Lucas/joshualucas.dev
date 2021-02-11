@@ -9,7 +9,7 @@ const AboutContainer = styled.section`
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 4rem;
   text-align: center;
   @media (min-width: 786px) {
     margin-top: 8rem;
