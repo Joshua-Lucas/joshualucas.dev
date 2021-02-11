@@ -5,11 +5,14 @@ import SkillsButton from './SkillsButton'
 
 //Styled Components
 const DetailsWrapper = styled.div`
-  padding-left: 12rem;
-  grid-column: 1/2;
-  grid-row: 2/3;
   display: flex;
-  flex-direction: column;
+  > * {
+    margin: 0.5rem;
+  }
+  @media (min-width: 768px) {
+    margin-right: 0.5rem;
+    flex-direction: column;
+  }
 `
 //Interface
 interface IDetailsContainer extends ISkillsData {

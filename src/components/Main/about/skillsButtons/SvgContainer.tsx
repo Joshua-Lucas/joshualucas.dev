@@ -1,13 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import { rem } from 'polished'
 
 // SYLED COMPONENTS
 const SVG = styled.svg`
-  width: 15%;
-  margin-right: 2rem;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  height: ${rem('100px')};
   stroke: #000;
+  @media (min-width: 768px) {
+    width: 15%;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+  }
 `
 
 // INTERFACES
