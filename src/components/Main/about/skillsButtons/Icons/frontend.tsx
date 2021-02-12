@@ -4,7 +4,7 @@ import React from 'react'
 
 const Frontend: React.SVGAttributes<SVGPathElement> = (
   <path
-    strokeWidth="2"
+    strokeWidth="10"
     d="M 124.00,198.53
        C 120.57,199.54 118.07,200.56 115.00,202.47
          98.68,212.59 102.00,230.60 102.00,247.00
