@@ -6,7 +6,8 @@ import { rem } from 'polished'
 const SVG = styled.svg`
   width: 100%;
   height: ${rem('100px')};
-  stroke: #000;
+  fill: ${({ theme }) => theme.colors.primary};
+  stroke: ${({ theme }) => theme.colors.primary};
   @media (min-width: 768px) {
     width: 15%;
     margin-right: 2rem;

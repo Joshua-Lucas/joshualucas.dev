@@ -7,8 +7,8 @@ import { Icons } from './Icons'
 const SkillButton = styled.button`
   width: 33%;
   cursor: pointer;
-  color: ${(props) => props.theme.primaryTextColor};
-  background-color: ${(props) => props.theme.secondaryColor};
+  color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.secondary};
   border: none;
   border-radius: 0.5rem;
   text-align: left;
