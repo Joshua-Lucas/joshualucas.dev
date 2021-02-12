@@ -11,6 +11,7 @@ const IntroWrapper = styled.section`
   margin-top: 1rem;
   display: flex;
   flex-direction: column-reverse;
+  padding-bottom: 2rem;
   @media (min-width: 768px) {
     height: 100vh;
     width: 75%;
@@ -18,11 +19,6 @@ const IntroWrapper = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20% 80%;
-    grid-column-gap: 6.5rem; */
   }
 `
 

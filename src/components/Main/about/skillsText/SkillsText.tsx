@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { setLightness } from 'polished'
 
 //Styled Components
 const TextDetailsWrapper = styled.div`
@@ -8,42 +9,41 @@ const TextDetailsWrapper = styled.div`
   flex-direction: column;
 `
 const SectionHeader = styled.h1`
-  padding-bottom: 2.3rem;
   color: ${(props) => props.theme.lightTextColor};
   font-size: 18px;
   font-weight: 300;
 `
 
 const Title = styled.h1`
-  padding-top: 0.75rem;
-  padding-bottom: 2.3rem;
+  padding: 0.5rem 0;
   font-size: 3.75rem;
+  text-transform: capitalize;
 `
 
 const IntroText = styled.h2`
-  padding-bottom: 2rem;
-  /* color: ${(props) => props.theme.lightTextColor}; */
+  padding-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.6;
   font-style: italic;
   font-weight: 300;
 `
+const ListSectionTitle = styled.h4`
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  color: ${(props) => props.theme.lightTextColor};
+`
 
 const ListContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem 0 2rem;
-`
-const ListSectionTitle = styled.h4`
-  font-size: 0.8rem;
-  color: ${(props) => props.theme.lightTextColor};
+  padding: 0.5rem 0;
 `
 const ListItem = styled.p`
   margin: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   text-align: center;
   border-radius: 0.5rem;
-  background-color: ${(props) => props.theme.secondaryColor};
+  background-color: ${setLightness(0.9, '#141414')};
   font-size: 12px;
 `
 

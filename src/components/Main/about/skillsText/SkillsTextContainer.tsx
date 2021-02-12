@@ -9,9 +9,11 @@ import { ISkillsData } from '../../Main'
 
 //Styled Components
 const TextWrapper = styled.div`
-  padding-right: 14rem;
-  grid-column: 2/3;
-  grid-row: 2/3;
+  padding: 0.5rem;
+  width: 100%;
+  @media (min-width: 768px) {
+    margin-left: 0.5rem;
+  }
 `
 interface ITextContainer extends ISkillsData {
   section?: string
